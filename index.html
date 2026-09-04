@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- EDIT: avoid your full name here if the point is not being searchable -->
+<title>A.F. — Business intelligence</title>
+
+<meta name="description" content="Business intelligence and reporting — turning event data into insight that brands and internal teams act on.">
+
+<!-- UNCOMMENT the line below if you want the page to exist but NOT appear in Google.
+     Useful if you only ever send the link directly to people.
+<meta name="robots" content="noindex, nofollow">
+-->
+
+<meta property="og:title" content="A.F.">
+<meta property="og:description" content="Business intelligence and reporting — turning event data into insight that brands and internal teams act on.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper:  #F2F3EF;
+  --ink:    #1A2320;
+  --muted:  #6E7873;
+  --rule:   #D5D9D1;
+  --accent: #2C5548;
+
+  --serif: "Newsreader", "Noto Serif TC", Georgia, serif;
+  --sans:  "IBM Plex Sans", "Noto Sans TC", system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 6rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+a:hover { text-decoration-thickness: 2px; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- masthead ---------- */
+
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.9375rem;
+}
+
+.masthead .name {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.masthead nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 1.25rem;
+}
+.masthead nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- opening statement ---------- */
+
+.opening { margin: 4.5rem 0 5.5rem; }
+
+.statement {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(1.5rem, 3.6vw, 2.5rem);
+  line-height: 1.22;
+  letter-spacing: -0.012em;
+  margin: 0;
+  max-width: 26ch;
+  text-wrap: balance;
+}
+
+.locale {
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+/* ---------- the disclosure line ---------- */
+
+.disclosure {
+  margin: 0 0 3.5rem;
+  padding: 0.65rem 0 0.65rem 1rem;
+  border-left: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  max-width: 52ch;
+}
+
+/* ---------- sections ---------- */
+
+.section {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 0 3rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--rule);
+  margin-bottom: 3.5rem;
+}
+
+.section h2 {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.section-body { max-width: 62ch; }
+.section-body > :first-child { margin-top: 0; }
+.section-body > :last-child { margin-bottom: 0; }
+
+/* ---------- entries ---------- */
+
+.entry { margin-bottom: 2.25rem; }
+.entry:last-child { margin-bottom: 0; }
+
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.entry-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.entry-meta {
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.entry p.detail {
+  margin: 0.5rem 0 0;
+  color: #414B46;
+}
+
+.entry .result {
+  margin-top: 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--accent);
+}
+
+/* ---------- principles ---------- */
+
+.principles-group { counter-reset: principle; }
+
+.principles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 34ch;
+}
+
+.principles li {
+  counter-increment: principle;
+  position: relative;
+  padding-left: 2.25rem;
+  margin-bottom: 0.95rem;
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 1.1875rem;
+  line-height: 1.42;
+}
+.principles li:last-child { margin-bottom: 0; }
+
+.principles li::before {
+  content: counter(principle);
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.principles-label {
+  margin: 0 0 1.25rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.principles + .principles-label { margin-top: 2.25rem; }
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 40rem) {
+  .section { grid-template-columns: 1fr; gap: 0.75rem; }
+  .opening { margin: 3rem 0 3rem; }
+  .statement { max-width: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .opening { animation: rise 700ms cubic-bezier(.2,.7,.3,1) both; }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(0.6rem); }
+    to   { opacity: 1; transform: none; }
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <!-- EDIT: initials, a first name, or a handle. Not your full name. -->
+    <div class="name">A.F.</div>
+    <nav>
+      <a href="#practice">Practice</a>
+      <a href="#work">Work</a>
+      <a href="#principles">Principles</a>
+    </nav>
+  </header>
+
+  <section class="opening">
+    <!-- EDIT: this needs no proper nouns at all, so it can stay fully honest.
+         Say what you do and who it's for. -->
+    <h1 class="statement">I run business intelligence for a global tech company, turning event data into insight that brands and internal teams act on.</h1>
+    <!-- EDIT: widen the geography. "East Asia" identifies far fewer people than a city. -->
+    <p class="locale">East Asia</p>
+  </section>
+
+  <!-- This line is doing real work. Without it, a page full of unnamed
+       companies reads as evasive or invented. With it, it reads as professional
+       discretion. Keep it short and unapologetic. EDIT to fit your situation. -->
+  <p class="disclosure">
+    Names and figures are withheld while I'm still in these roles. Everything below is
+    described accurately; I'm glad to go into specifics in a conversation.
+  </p>
+
+  <section class="section" id="practice">
+    <h2>Practice</h2>
+    <div class="section-body">
+
+      <!-- EDIT: 3–4 categories, no more. Each title names a capability;
+           each paragraph says what it means when you actually do it.
+           Concrete verbs beat abstract nouns — "define the metrics" not
+           "metric definition ownership".
+
+           The right-hand figure is optional depth signal. Delete the
+           <span class="entry-meta"> line from any entry you'd rather leave off. -->
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Measurement and reporting systems</h3>
+          <span class="entry-meta">8 years</span>
+        </div>
+        <p class="detail">Designing the numbers an organisation runs on — the definitions, the pipelines that produce them, and the reporting layer people read them through. Usually starts with reconciling figures that three teams each believe are correct.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Data governance and definitions</h3>
+          <span class="entry-meta">6 years</span>
+        </div>
+        <p class="detail">Establishing one authoritative source and the rules that keep it authoritative. The technical work is the smaller half; the rest is getting teams to give up the spreadsheets they trust.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Engineering and commercial translation</h3>
+          <span class="entry-meta">8 years</span>
+        </div>
+        <p class="detail">Sitting between the people who build the system and the people who sell against it, so requirements survive the trip in both directions. Turning vague commercial asks into specifications engineers can estimate.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Governance and oversight</h3>
+          <span class="entry-meta">2 years</span>
+        </div>
+        <p class="detail">Board-level review of financial reporting and operational risk at a listed company. Reading management's numbers with the same scepticism I'd apply to my own.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <h2>Selected work</h2>
+    <div class="section-body">
+
+      <!-- EDIT: give each project a plain functional name rather than its
+           internal codename. Internal codenames are searchable and often leak
+           the employer faster than the employer's name would. -->
+      <div class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Unified reporting layer</h3>
+          <span class="entry-meta">2025</span>
+        </div>
+        <p class="detail">What the situation was, what you did, and what was different afterwards. The method is the interesting part and none of it needs redacting.</p>
+        <p class="result">Cut monthly close from five days to one.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Survey measurement programme</h3>
+          <span class="entry-meta">2024</span>
+        </div>
+        <p class="detail">Same shape.</p>
+        <p class="result">Reduced per-study cost by roughly 60%.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3 class="entry-title">Internal ERP build</h3>
+          <span class="entry-meta">2023</span>
+        </div>
+        <p class="detail">Same shape.</p>
+        <p class="result">Replaced three vendor tools with one system.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="principles">
+    <h2>Principles</h2>
+    <div class="section-body">
+
+      <div class="principles-group">
+
+        <p class="principles-label">The eleven leadership principles of the U.S. Marine Corps.</p>
+
+        <!-- The Corps' own wording. A civilian rendering also circulates, which
+             reads "your people" in 3 and 7 and "your personnel" in 4. If you did
+             not serve, that version avoids implying you did. Swap all three or
+             none — a half-converted list looks like an error. -->
+        <ol class="principles" role="list">
+          <li>Know yourself and seek self-improvement.</li>
+          <li>Be technically and tactically proficient.</li>
+          <li>Know your Marines and look out for their welfare.</li>
+          <li>Keep your Marines informed.</li>
+          <li>Set the example.</li>
+          <li>Ensure the task is understood, supervised, and accomplished.</li>
+          <li>Train your Marines as a team.</li>
+          <li>Make sound and timely decisions.</li>
+          <li>Develop a sense of responsibility among your subordinates.</li>
+          <li>Employ your command in accordance with its capabilities.</li>
+          <li>Seek responsibility and take responsibility for your actions.</li>
+        </ol>
+
+        <p class="principles-label">And from the world</p>
+
+        <!-- Numbering continues automatically from the list above. The start="12"
+             attribute is only there so the semantics are right for screen readers
+             and for anyone reading with CSS disabled. If you add or remove a
+             principle above, update it. -->
+        <ol class="principles" role="list" start="12">
+          <li>Adjust quickly when situations change.</li>
+          <li>Measure what matters, ignore the noise.</li>
+        </ol>
+
+      </div>
+
+      <!-- Your own principles, parked here rather than deleted:
+           A number nobody can trace is not a number. It is a rumour.
+           When two teams report different figures, the disagreement is the finding.
+           Every dashboard is a claim about what matters. Most are never argued for.
+      -->
+
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
