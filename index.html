@@ -20,13 +20,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 :root {
   --paper:  #F2F3EF;
   --ink:    #1A2320;
   --muted:  #6E7873;
+  --muted-2: #838C87;   /* one step lighter, for fine print only */
   --rule:   #D5D9D1;
   --accent: #2C5548;
 
@@ -112,13 +113,18 @@ a:hover { text-decoration-thickness: 2px; }
 /* ---------- the disclosure line ---------- */
 
 .disclosure {
-  margin: 0 0 3.5rem;
-  padding: 0.65rem 0 0.65rem 1rem;
-  border-left: 1px solid var(--rule);
-  color: var(--muted);
+  /* Footer of the Practice section. Spans both grid columns so it runs the
+     full content width, flush left with the section label. */
+  grid-column: 1 / -1;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  border: 0;
+  color: var(--muted-2);
+  font-style: italic;
   font-size: 0.8125rem;
-  line-height: 1.55;
-  max-width: 52ch;
+  line-height: 1.6;
+  max-width: none;
+  text-wrap: pretty;
 }
 
 /* ---------- sections ---------- */
@@ -263,14 +269,6 @@ a:hover { text-decoration-thickness: 2px; }
     <p class="locale">East Asia</p>
   </section>
 
-  <!-- This line is doing real work. Without it, a page full of unnamed
-       companies reads as evasive or invented. With it, it reads as professional
-       discretion. Keep it short and unapologetic. EDIT to fit your situation. -->
-  <p class="disclosure">
-    Names and figures are withheld while I'm still in these roles. Everything below is
-    described accurately; I'm glad to go into specifics in a conversation.
-  </p>
-
   <section class="section" id="practice">
     <h2>Practice</h2>
     <div class="section-body">
@@ -316,6 +314,14 @@ a:hover { text-decoration-thickness: 2px; }
       </div>
 
     </div>
+
+    <!-- Sits in the Practice section as its footer, spanning both grid columns
+         so it stays flush with the label column on the left and the section's
+         right edge. The rule below it is the Work section's border-top. -->
+    <p class="disclosure">
+      Names and figures are withheld while I'm still in these roles. Everything below is
+      described accurately; I'm glad to go into specifics in a conversation.
+    </p>
   </section>
 
   <section class="section" id="work">
