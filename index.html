@@ -4,18 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- EDIT: avoid your full name here if the point is not being searchable -->
     <title>A.F. — Business intelligence</title>
 
     <meta
       name="description"
-      content="Business intelligence professional, turning data into key insights that brands and internal teams act on."
+      content="Measurement and reporting systems, data governance, and the translation between engineering and commercial teams."
     />
-
-    <!-- UNCOMMENT the line below if you want the page to exist but NOT appear in Google.
-     Useful if you only ever send the link directly to people.
-<meta name="robots" content="noindex, nofollow">
--->
 
     <meta property="og:title" content="A.F." />
     <meta
@@ -258,6 +252,11 @@
         color: var(--muted);
       }
 
+      .principles-intro {
+        margin: 0 0 2.25rem;
+        max-width: 48ch;
+      }
+
       .principles-label {
         margin: 0 0 1.25rem;
         font-size: 0.875rem;
@@ -304,7 +303,6 @@
   <body>
     <div class="wrap">
       <header class="masthead">
-        <!-- EDIT: initials, a first name, or a handle. Not your full name. -->
         <div class="name">A.F.</div>
         <nav>
           <a href="#practice">Practice</a>
@@ -314,27 +312,16 @@
       </header>
 
       <section class="opening">
-        <!-- EDIT: this needs no proper nouns at all, so it can stay fully honest.
-         Say what you do and who it's for. -->
         <h1 class="statement">
-          I am a strategician who turns data into key insights that brands and
-          internal teams act on. Currently, I consult for a software company.
+          I am a strategist who turns data into key insights that brands and
+          internal teams act on, working in-house at a software company.
         </h1>
-        <!-- EDIT: widen the geography. "East Asia" identifies far fewer people than a city. -->
         <p class="locale">East Asia</p>
       </section>
 
       <section class="section" id="practice">
         <h2>Practice</h2>
         <div class="section-body">
-          <!-- EDIT: 3–4 categories, no more. Each title names a capability;
-           each paragraph says what it means when you actually do it.
-           Concrete verbs beat abstract nouns — "define the metrics" not
-           "metric definition ownership".
-
-           The right-hand figure is optional depth signal. Delete the
-           <span class="entry-meta"> line from any entry you'd rather leave off. -->
-
           <div class="entry">
             <div class="entry-head">
               <h3 class="entry-title">Measurement and reporting systems</h3>
@@ -358,8 +345,7 @@
             <p class="detail">
               Directing organization-wide data mapping and inventory audits,
               identifying legacy, unencrypted, and redundant data sets across
-              local drives and cloud systems; sanitized over 2TB of
-              non-compliant PII.
+              local drives and cloud systems.
             </p>
           </div>
 
@@ -391,9 +377,6 @@
           </div>
         </div>
 
-        <!-- Sits in the Practice section as its footer, spanning both grid columns
-         so it stays flush with the label column on the left and the section's
-         right edge. The rule below it is the Work section's border-top. -->
         <p class="disclosure">
           Names and figures are withheld while I'm still in these roles.
           Everything below is described accurately; I'm glad to go into
@@ -404,17 +387,15 @@
       <section class="section" id="work">
         <h2>Selected work</h2>
         <div class="section-body">
-          <!-- EDIT: give each project a plain functional name rather than its
-           internal codename. Internal codenames are searchable and often leak
-           the employer faster than the employer's name would. -->
           <div class="entry">
             <div class="entry-head">
               <h3 class="entry-title">Unified reporting layer</h3>
               <span class="entry-meta">2025</span>
             </div>
             <p class="detail">
-              Depolyed full service reporting layer for the organization,
-              generating reports for over $60 million in revenue..
+              Deployed the organization's end-to-end reporting layer, from
+              ingestion through to the client-facing view, covering more than
+              $60 million in reported revenue.
             </p>
             <p class="result">Cut monthly close from five days to one.</p>
           </div>
@@ -443,7 +424,13 @@
               <h3 class="entry-title">Standardized partner reporting</h3>
               <span class="entry-meta">2023</span>
             </div>
-            <p class="detail">Same shape.</p>
+            <p class="detail">
+              Agreed a single set of metric definitions with external partners,
+              then rebuilt their reporting on top of it. The hard part was not
+              the build; it was settling which definition was correct when a
+              partner's own tool and ours had been counting the same event
+              differently for years.
+            </p>
             <p class="result">Replaced three vendor tools with one system.</p>
           </div>
 
@@ -452,7 +439,13 @@
               <h3 class="entry-title">Survey measurement program</h3>
               <span class="entry-meta">2022</span>
             </div>
-            <p class="detail">Same shape.</p>
+            <p class="detail">
+              Brought brand-lift and media-consumption studies in house. Fixed
+              the study design, the naming conventions, and the fielding
+              procedure so a study became something the team runs to a written
+              standard rather than something commissioned from scratch each
+              time.
+            </p>
             <p class="result">Reduced per-study cost by roughly 60%.</p>
           </div>
         </div>
@@ -462,51 +455,51 @@
         <h2>Principles</h2>
         <div class="section-body">
           <div class="principles-group">
-            <p class="principles-label">
-              The eleven leadership principles of the U.S. Marine Corps.
+            <p class="principles-intro">
+              I write this list by hand every morning. The repetition puts it
+              in memory, which is the only place a principle is any use.
             </p>
 
-            <!-- The Corps' own wording. A civilian rendering also circulates, which
-             reads "your people" in 3 and 7 and "your personnel" in 4. If you did
-             not serve, that version avoids implying you did. Swap all three or
-             none — a half-converted list looks like an error. -->
+            <p class="principles-label">
+              Inspired by the U.S. Marine Corps leadership principles.
+            </p>
+
             <ol class="principles" role="list">
               <li>Know yourself and seek self-improvement.</li>
               <li>Be technically and tactically proficient.</li>
-              <li>Know your Marines and look out for their welfare.</li>
-              <li>Keep your Marines informed.</li>
+              <li>Know your team and look out for their welfare.</li>
+              <li>Keep your team informed.</li>
               <li>Set the example.</li>
               <li>
                 Ensure the task is understood, supervised, and accomplished.
               </li>
-              <li>Train your Marines as a team.</li>
+              <li>Train your team as a unit.</li>
               <li>Make sound and timely decisions.</li>
               <li>
                 Develop a sense of responsibility among your subordinates.
               </li>
               <li>Employ your command in accordance with its capabilities.</li>
-              <li>
-                Seek responsibility and take responsibility for your actions.
-              </li>
+              <li>Seek responsibility and take responsibility.</li>
             </ol>
 
-            <p class="principles-label">And from the world</p>
+            <p class="principles-label">
+              Principles I picked up along the way.
+            </p>
 
-            <!-- Numbering continues automatically from the list above. The start="12"
-             attribute is only there so the semantics are right for screen readers
-             and for anyone reading with CSS disabled. If you add or remove a
-             principle above, update it. -->
             <ol class="principles" role="list" start="12">
               <li>Adjust quickly when situations change.</li>
               <li>Measure what matters, ignore the noise.</li>
+              <li>A number nobody can trace is a rumour.</li>
+              <li>
+                When two teams report different figures, the disagreement is
+                the finding.
+              </li>
+              <li>
+                Every dashboard is a claim about what matters, and most are
+                never argued for.
+              </li>
             </ol>
           </div>
-
-          <!-- Your own principles, parked here rather than deleted:
-           A number nobody can trace is not a number. It is a rumour.
-           When two teams report different figures, the disagreement is the finding.
-           Every dashboard is a claim about what matters. Most are never argued for.
-      -->
         </div>
       </section>
     </div>
